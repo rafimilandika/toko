@@ -18,7 +18,8 @@
         <form action="/updatetData" method="post" enctype="multipart/form-data">
             @csrf
             <div class="gambar_preview">
-                <img src="{{ asset('storage/' . $barangs->gambar) }}" alt="{{ $barangs->nama }} ">
+                <!-- <img src="{{ asset('storage/' . $barangs->gambar) }}" alt="{{ $barangs->nama }} "> -->
+                <img src="{{ $barangs->gambar }}" alt="{{ $barangs->nama }}">
             </div>
             <input type="hidden" name="gambar_lama" value="{{$barangs->gambar}}">
             <input type="hidden" name="id" value="{{$barangs->id}}">

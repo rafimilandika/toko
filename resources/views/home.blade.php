@@ -33,7 +33,8 @@
 <div class="item-card" data-id="{{$barang->id}}">
     <div class="item-header">
         <div class="item-image" onclick="perbesarGambar(this)">
-            <img src="{{ asset('storage/' . $barang->gambar) }}" alt="{{ $barang->nama }}">
+            <!-- <img src="{{ asset('storage/' . $barang->gambar) }}" alt="{{ $barang->nama }}"> -->
+             <img src="{{ $barang->gambar }}" alt="{{ $barang->nama }}">
         </div>
         <div class="item-details">
             <h4 class="item-name">{{$barang->nama}}</h4>
