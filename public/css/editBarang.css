@@ -1,0 +1,116 @@
+/* General Styling & Layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2c2657; /* Warna dasar yang seragam dengan halaman utama */
+    margin: 0;
+    padding: 0;
+    color: white; /* Ubah warna teks default menjadi putih */
+}
+
+.tambahKontener {
+    padding: 20px;
+}
+
+/* --- Header Section --- */
+.header-edit {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 15px 0;
+    margin-bottom: 20px;
+}
+
+.header-edit a {
+    position: absolute;
+    left: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 5px;
+    background-color: #f0ae44;
+    color: black;
+    border-radius: 5px;
+}
+
+.header-edit .judul-halaman {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+/* --- Form Section --- */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between form elements */
+    background-color: white;
+    padding: 20px;
+    margin: 0px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Labels */
+label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #444;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="number"],
+input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #f1f1f1; /* Latar belakang input terang */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    color: #333; /* Warna teks di dalam input */
+}
+
+/* File Input specific styling */
+input[type="file"] {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+/* Save Button */
+button[type="submit"] {
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #28a745; /* Hijau untuk aksi positif */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* --- Image Preview Section --- */
+.gambar_preview {
+    width: 150px;
+    height: 150px;
+    border: 2px dashed rgba(255, 255, 255, 0.5); /* Garis putus-putus putih */
+    border-radius: 8px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.gambar_preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

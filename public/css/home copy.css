@@ -1,0 +1,121 @@
+* {
+    /* background-color: rebeccapurple; */
+    padding: 0px;
+    margin: 0px;
+}
+.homeKontener {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 1fr 8fr;
+    background-color: azure;
+    position: relative;
+}
+.topbar {
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    background-color: blueviolet;
+}
+.search {
+    background-color: brown;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.search input {
+    width: 90%;
+    height: 50%;
+    padding: 0px 10px;
+    box-sizing: border-box;
+}
+.tabel {
+    background-color: chartreuse;
+    height: 600px;
+    overflow-y: scroll;
+}
+.tabel table {
+    width: 100%;
+}
+table img {
+    width: 100%;
+    height: 100%;
+}
+.tabel th:nth-child(1),
+.tabel td:nth-child(1) {
+    width: 15%;
+}
+
+.tabel th:nth-child(2),
+.tabel td:nth-child(2) {
+    width: 40%;
+}
+
+.tabel th:nth-child(3),
+.tabel td:nth-child(3) {
+    width: 20%;
+}
+
+.tabel th:nth-child(4),
+.tabel td:nth-child(4) {
+    width: 25%;
+}
+.kuantitas-container input {
+    width: 50px;
+    height: 30px;
+    text-align: center; /* Teks di tengah */
+}
+
+.kuantitas-container button {
+    height: 30px;
+    font-size: 14px;
+    padding: 0 8px; /* Padding horizontal saja */
+    cursor: pointer; /* Memberi tahu pengguna bahwa elemen bisa diklik */
+}
+.zoomGambar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+.zoomGambar img {
+    width: 500px;
+    height: 500px;
+}
+.gambar-kecil {
+    width: 100px; /* Ukuran gambar awal */
+    height: 100px;
+    cursor: pointer; /* Mengubah kursor saat di hover */
+    transition: transform 0.3s ease; /* Efek transisi yang halus */
+}
+
+.gambar-besar {
+    width: 500px;
+    height: 500px;
+}
+.util {
+    display: flex;
+    flex-direction: column;
+}
+.checkout {
+    position: absolute;
+    width: 100vw;
+    height: 70px;
+    background-color: rgb(44, 107, 185);
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    display: flex;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}

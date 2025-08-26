@@ -1,0 +1,302 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    background-color: #2c2657;
+}
+
+.homeKontener {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+    /* margin-top: 40px; */
+    position: relative;
+}
+.zoomGambar {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+.zoomGambar img {
+    width: 500px;
+    height: 500px;
+}
+/* --- Top Bar & Search --- */
+.atas {
+    /* background-color: #dc3545; */
+    position: static;
+}
+.topbar {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.topbar a,
+.topbar #edit-tabel-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    text-decoration: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    background-color: #28a745;
+}
+
+.topbar #edit-tabel-btn {
+    background-color: #007bff;
+}
+
+.search {
+    margin-bottom: 15px;
+    position: relative;
+}
+.search i {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-size: 30px;
+    background-color: white;
+}
+
+.search input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+/* --- Card View --- */
+.tabel {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Jarak antar kartu */
+    /* background-color: #28a745; */
+    height: 672px;
+    overflow-y: scroll;
+}
+
+.item-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+.item-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.item-image img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.item-details {
+    flex-grow: 1;
+}
+
+.item-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c2657;
+    margin: 0 0 5px;
+}
+
+.item-price {
+    font-size: 16px;
+    font-weight: 700;
+    color: #28a745;
+    margin: 0;
+}
+
+.item-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Tombol Edit/Hapus */
+.util {
+    /* background-color: #dc3545; */
+    display: flex;
+    gap: 10px;
+}
+.item-actions .util {
+    display: flex;
+    gap: 5px;
+}
+
+.item-actions .util button {
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.item-actions .edit-btn {
+    background-color: #007bff;
+}
+
+.item-actions .hapus-btn {
+    background-color: #dc3545;
+}
+
+/* Tombol Pilih/Kuantitas */
+.item-actions .pilih-kolom button.pilih-barang {
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    background-color: #28a745;
+    cursor: pointer;
+}
+.item-actions .kuantitas-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    /* height: 50px; */
+    /* background-color: #dc3545; */
+}
+
+.kuantitas-container input {
+    width: 70px;
+    height: 35px;
+    padding: 5px 15px;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid #000000;
+    border-radius: 4px;
+}
+
+.kuantitas-container button {
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.kuantitas-container .tambah-keranjang {
+    background-color: #28a745;
+    height: 35px;
+    width: 70px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.kuantitas-container .batal-checkout {
+    background-color: #6c757d;
+    height: 35px;
+    width: 70px;
+    font-size: 14px;
+    font-weight: 600;
+}
+/* Ukuran kolom tidak lagi menggunakan persentase tetap, tapi disesuaikan */
+.gambar-kecil {
+    width: 60px; /* Ukuran gambar lebih kecil di HP */
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Kuantitas (Pilih, Tambah, Batal) */
+.kuantitas-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.kuantitas-container input {
+    width: 40px; /* Lebar lebih kecil */
+    height: 25px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.kuantitas-container button {
+    height: 25px;
+    font-size: 12px;
+    padding: 0 6px;
+}
+
+/* --- Checkout Section --- */
+.checkout {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    height: 100px;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    overflow: hidden;
+    z-index: 2;
+}
+.checkout .data {
+    /* background-color: #007bff; */
+    margin-top: -10px;
+}
+#keranjang-info {
+    margin-top: -5px;
+    /* background-color: #dc3545; */
+}
+#keranjang-info p:nth-child(2) {
+    margin-top: -10px;
+    /* background-color: #dc3545; */
+}
+.util-keranjang {
+    display: flex;
+    flex-direction: column;
+    /* background-color: #28a745; */
+    padding-top: 10px;
+    gap: 10px;
+}
+.hapus-keranjang {
+    height: 35px;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #dc3545;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+.util-keranjang a {
+    padding: 10px 20px;
+    /* background-color: yellow; */
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}

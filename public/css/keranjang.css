@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+}
+.header-keranjang {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 15px 0;
+    margin-bottom: 20px;
+}
+
+.header-keranjang a {
+    position: absolute;
+    left: 0;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 5px;
+    background-color: #f0ae44;
+    color: black;
+    border-radius: 5px;
+}
+
+.header-keranjang .judul-halaman {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c2657;
+}
+.total-container {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.total-container h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: normal;
+}
+.total-container p {
+    font-size: 36px;
+    font-weight: bold;
+    color: #2c2657;
+    margin: 5px 0 0;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    font-size: 16px;
+}
+th {
+    background-color: #2c2657;
+    color: white;
+    font-weight: 600;
+}
+tr:nth-child(even) {
+    background-color: #cce7f9; /* Warna strip */
+}
+.empty-cart {
+    text-align: center;
+    padding: 50px;
+}

@@ -1,0 +1,112 @@
+/* General Styling & Layout */
+body {
+    font-family: Arial, sans-serif;
+    /* background-color: #f5f5f5; */
+    background-color: #2c2657;
+    margin: 0;
+    padding: 0;
+}
+
+.tambahKontener {
+    padding: 20px;
+}
+
+/* --- Header Section --- */
+.header-tambah {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 15px 0;
+    margin-bottom: 20px;
+}
+
+.header-tambah a {
+    position: absolute;
+    left: 0;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 5px;
+    background-color: #f0ae44;
+    color: black;
+    border-radius: 5px;
+}
+
+.header-tambah .judul-halaman {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+/* --- Form Section --- */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between form elements */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Labels */
+label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #444;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="number"],
+input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+    -webkit-appearance: none; /* Removes default styling for some inputs on mobile */
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* File Input specific styling */
+input[type="file"] {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+/* Save Button */
+button[type="submit"] {
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #28a745; /* Green for save/positive action */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* --- Image Preview Section --- */
+.gambar_preview {
+    width: 150px;
+    height: 150px;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    display: flex;
+    align-self: center; /* Center the preview box */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.gambar_preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
