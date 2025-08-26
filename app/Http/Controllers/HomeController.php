@@ -9,6 +9,7 @@ use App\Http\Requests\UpdatehomeRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
+use Cloudinary\Cloudinary;
 
 class HomeController extends Controller
 {
@@ -41,7 +42,19 @@ class HomeController extends Controller
             'harga' => 'required|numeric',
             'gambar' => 'required|image',
             ]);
-        $pathGambar = $request->file('gambar')->store('gambar', 'public');
+        // $pathGambar = $request->file('gambar')->store('gambar', 'public');
+
+        $cloudinary = new Cloudinary([
+    'cloud' => [
+        'cloud_name' => env('CLOUDINARY_CLOUD_NAME'),
+        'api_key'    => env('CLOUDINARY_API_KEY'),
+        'api_secret' => env('CLOUDINARY_API_SECRET'),
+    ],
+]);
+
+$pathGambar = $cloudinary->uploadApi()->upload(
+    $request->file('gambar')->getRealPath()
+)['secure_url'];
 
         try{
                 Barang::create([
@@ -79,7 +92,19 @@ return redirect('/')->with('success', 'Data berhasil ditambahkan');
             {
                 Storage::delete($request->gambar_lama);
             }
-            $pathGambar = $request->file('gambar')->store('gambar', 'public');
+            // $pathGambar = $request->file('gambar')->store('gambar', 'public');
+
+            $cloudinary = new Cloudinary([
+    'cloud' => [
+        'cloud_name' => env('CLOUDINARY_CLOUD_NAME'),
+        'api_key'    => env('CLOUDINARY_API_KEY'),
+        'api_secret' => env('CLOUDINARY_API_SECRET'),
+    ],
+]);
+
+$pathGambar = $cloudinary->uploadApi()->upload(
+    $request->file('gambar')->getRealPath()
+)['secure_url'];
             }
             else{
                 $pathGambar = $request->gambar_lama;

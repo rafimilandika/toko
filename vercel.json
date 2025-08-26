@@ -22,6 +22,10 @@
         "DB_USERNAME": "sql12796209",
         "DB_PASSWORD": "Qq5NDXbkaF",
 
+        "CLOUDINARY_CLOUD_NAME": "dxuzl0kum",
+        "CLOUDINARY_API_KEY": "951665676136972",
+        "CLOUDINARY_API_SECRET": "43AWdqoTFvbUVJ3he0tbxpiP-M4",
+
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
